@@ -12,10 +12,21 @@ def submit_value():
 def open_login_window():
     login_window = Toplevel(root)
     login_window.title("Login Form")
-    login_window.geometry("300x200")
+    login_window.geometry("500x300")
+
     Label(login_window, text="Login Form", font=("Arial", 16, "bold")).pack(pady=10)
-    # Add login form widgets here...
-    # Hide registration form window
+
+
+    Label(login_window, text="Email:", font=label_font, bg=label_bg).pack(padx=5)
+    email_entry = Entry(login_window, textvariable=email_value, font=entry_font, bg=entry_bg)
+    email_entry.pack( padx=5)
+
+    # ID Label and Entry
+    Label(login_window, text="ID:", font=label_font, bg=label_bg).pack(pady=5)
+    id_entry = Entry(login_window, textvariable=id_value, font=entry_font, bg=entry_bg)
+    id_entry.pack(pady=5)
+
+    Button(login_window, text="Login", command=submit_value, font=label_font, bg=button_bg, fg=button_fg).pack(pady=10)
     root.withdraw()
 # Styling
 label_font = ("Arial", 11, "bold")
