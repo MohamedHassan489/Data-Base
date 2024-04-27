@@ -21,8 +21,8 @@ entry_supplierphonenumber.place(relx=0.2 , rely=0.4)
 def insert():
     try:
         connection =pyodbc.connect('DRIVER={SQL Server};'+
-                                   'SERVER=YOUSSEFALBERT;'+
-                                   'DATABASE=MedicineFactoryDB;'+
+                                   'SERVER=DESKTOP-PR45KHB\SQLSERVER;'+
+                                   'DATABASE=master;'+
                                    'Trusted_connection= True;'
         )
         connection.autocommit= True
